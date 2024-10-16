@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+}
+
+/* Title sizing, colors */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2em;
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  background-size: contain;
+}
+h1 {
+  font-size: 2.3em;
+}
+h1 h3 {
+  color: hsl(292, 42%, 14%);
+}
+h3 {
+  font-size: 16px;
+  cursor: pointer;
+}
+p {
+  font-size: 16px;
+  color: hsl(292, 16%, 49%);
+}
+hr {
+  border: 1px solid hsl(275, 100%, 97%);
+}
+
+/* class styling */
+.card-ctn {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+  border-radius: 0.5em;
+  background-color: white;
+  transition: all 1s ease-in;
+  max-width: 600px;
+}
+.header-card-ctn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  img {
+    width: 30px;
+  }
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.answer.show {
+  max-height: 200px;
+}
+.question {
+  color: hsl(292, 42%, 14%);
+}
+.title-faq {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .question {
+    width: 80%;
+  }
+  img {
+    cursor: pointer;
+  }
+
+  h3:hover {
+    color: hsl(293, 47%, 57%);
+  }
+}
+
+.title-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+/* responsive */
+@media screen and (min-width: 500px) {
+  body {
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+    background-position: top;
+    background-size: contain;
+  }
+
+  .card-ctn {
+    padding: 2em;
+  }
+  .title-ctn {
+    gap: 0.5em;
+  }
+}
